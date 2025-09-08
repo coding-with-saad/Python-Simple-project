@@ -148,4 +148,4 @@ exit_btn.grid(row=6, column=2, pady=15)
 update_scoreboard()
 set_starting_player()
 
-root.mainloo
+root.mainloop
