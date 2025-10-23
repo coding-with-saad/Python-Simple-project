@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Assistant</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background: white;
+            color: #27ae60;
+            font-weight: bold;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px 0;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1e8449;
+            color: white;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your AI Assistant 🌿</h1>
+    <div class="container">
+        <label for="command">Enter your command:</label><br>
+        <input type="text" id="command" placeholder="Type something..."><br>
+        <button onclick="searchYouTube()">Search on YouTube</button>
+        <button onclick="searchGoogle()">Search on Google</button>
+        <button onclick="searchInstagram()">Search on Instagram</button>
+    </div>
+    <footer>Created by Malik Saad Khawar</footer>
+
+    <script>
+        function searchYouTube() {
+            const query = document.getElementById("command").value;
+            if (query)
+                window.open(`https://www.youtube.com/results?search_query=${query}`, "_blank");
+        }
+
+        function searchGoogle() {
+            const query = document.getElementById("command").value;
+            if (query)
+                window.open(`https://www.google.com/search?q=${query}`, "_blank");
+        }
+
+        function searchInstagram() {
+            const username = document.getElementById("command").value.replace('@', '');
+            if (username)
+                window.open(`https://www.instagram.com/${username}/`, "_blank");
+        }
+    </script>
+</body>
+</html>
